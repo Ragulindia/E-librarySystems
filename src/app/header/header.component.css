@@ -1,0 +1,11 @@
+.header {
+    background-color: #04aa6d;
+    
+}
+a {
+    color: white;
+}
+a:hover {
+    background-color: rgba(4, 105, 4, 0.795);
+    color: white;
+}
