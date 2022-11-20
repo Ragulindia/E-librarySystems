@@ -1,11 +1,64 @@
 .header {
     background-color: #04aa6d;
-    
+    /* position: fixed !important; */
+
 }
+
 a {
     color: white;
 }
+
 a:hover {
     background-color: rgba(4, 105, 4, 0.795);
     color: white;
+}
+
+/* .header-login {
+    margin-top: 0;
+} */
+
+/* .header-login a {
+
+    border-radius: 0;
+    border: none;
+    padding-bottom: 1px;
+    margin-top: 0;
+
+} */
+
+.header-login a:hover {
+    background-color: #04aa6d;
+    color: white;
+
+}
+.header-login {
+    background-color: #04aa6d;
+    color: white;
+}
+
+.header-ul li a {
+    border-radius: 0;
+
+}
+.activei {
+    color: white;
+}
+.search{
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 33px;
+    text-align: center;
+    background-color: #04aa6d;
+    transform: matrix(100%);
+}
+.search-li  form {
+    color: #04aa6d;
+}
+.search-li button {
+    margin-left:0 ;
+    
+}
+#input-box{
+    background:transparent;
+    
 }

@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="logfunction()" novalidate>
+        <div>
+            <h2>Log in</h2>
+        </div>
+        <div>
+            <label for="user-name" class="login-label">User Name</label>
+            <label for="" class="login-label-right">Need an account? <a routerLink="/sign-up" class="login-label-a">Sign
+                    up</a></label>
+        </div>
+        <div>
+            <input type="text" name="user-name" id="user-name" class="login-input" formControlName="username">
+        </div>
+        <div>
+            <label for="password" class="login-label">Password</label>
+
+        </div>
+        <div>
+            <input type="password" name="password" id="password" class="login-input" formControlName="password">
+        </div>
+        <div>
+            <span class="login-err"
+                *ngIf="ErrorMessage">
+                Invaild Username or Password !</span>
+        </div>
+        <div>
+            <button type="submit" class="login-btn">Log in</button>
+        </div>
+        <div class="login-forgot">
+            <a routerLink="/forgot-password" class="login-a-forgot">Forgot password?</a>
+        </div>
+    </form>
+</div>
+<div class="login-footer">
+    <span>@2021-2022<a href="#">E-librarysystems</a>.All rights reserved<a href="#"> Cookie policy</a>,
+        <a href="#">Privacy</a> and <a href="#">Terms</a></span>
+</div>

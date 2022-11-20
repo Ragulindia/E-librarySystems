@@ -1,7 +1,8 @@
-<div class="header">
-    <ul class="nav nav-tabs">
+<div class="header fixed-top position-relative">
+    <ul class="nav nav-tabs header-ul">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active">Active</a>
+            <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active">
+                <i class="fa-solid fa-house-chimney"></i></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
@@ -12,14 +13,30 @@
         <li class="nav-item">
             <a class="nav-link" routerLink="/price-details" routerLinkActive="active">Price Details </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-        </li>
-        <li class="nav-item">
+
+
+        <!-- <li class="nav-item">
             <a class="nav-link" routerLink="/search" routerLinkActive="active">Search</a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <li class="nav-item " *ngIf="auth.userlog == true">
             <a class="nav-link" routerLink="/add-book" routerLinkActive="active">Add Book</a>
+
         </li>
+        <li class="search-li" *ngIf="auth.userlog == true">
+            <form class="d-flex search" role="search">
+                <input class="form-control me-2 " id="input-box" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+        </li>
+
+        <li class="header-login position-absolute end-0 " style="background-color:#04aa6d;">
+            <a class="nav-link" routerLink="/login" title="LogIn" routerLinkActive="activei" *ngIf="!auth.loggedin()"><i
+                    class="fa-solid fa-circle-user fa-1x fa-fw"></i></a>
+            <a class="nav-link" routerLink="/logout" routerLinkActive="activei" *ngIf="auth.loggedin()" (click)="auth.logoutuser()" title="Logout"><i
+                    class="fa-solid fa-right-from-bracket fa-fw fa-1x"></i></a>
+        </li>
+
+
     </ul>
+
 </div>

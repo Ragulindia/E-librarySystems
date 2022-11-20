@@ -1,0 +1,49 @@
+#carousel {
+    width: 70%;
+    float: left;
+}
+
+.home-left {
+    width: 30%;
+    height: 300px;
+    float: left;
+    padding: 20px;
+    background-color: rgb(209, 245, 233);
+}
+
+.home-body {
+    margin-top: 5px;
+}
+
+.home-section {
+    clear: both;
+    background-color: rgb(247, 229, 229);
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.home-section ul {
+    /* background-color: rgb(204, 197, 197); */
+    margin: 0;
+    padding: 0;
+}
+
+.home-section li {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.home-section a {
+    text-decoration: none;
+}
+
+.home-section a:hover {
+    text-decoration: underline;
+    color: rgb(238, 115, 115);
+}
+
+hr {
+    color: orange;
+}

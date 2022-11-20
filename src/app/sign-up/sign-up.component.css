@@ -1,4 +1,5 @@
-.login {
+.signup {
+
     border: 1px solid #e3e3e3;
     width: 40%;
     margin: auto;
@@ -12,10 +13,9 @@
     position: relative;
     text-align: left;
     margin-top: 40px;
-
 }
 
-.login-input {
+.signup input {
     width: 100%;
     border: 1px solid #ced4da;
     border-radius: 4px;
@@ -24,7 +24,7 @@
     padding: 5px;
 }
 
-.login-btn {
+.signup button {
     width: 100%;
     background-color: #04aa6d;
     color: #fff;
@@ -35,50 +35,28 @@
     font-size: 18px;
     font-weight: 600;
     font-family: Source Sans Pro, sans-serif;
-
+    margin-top: 15px;
 }
 
-.login-btn:hover {
-    background-color: rgba(4, 105, 4, 0.795);
-    ;
+.signupUser {
+    display: flex;
 }
-
-.login-forgot {
-    text-align: center;
-    margin-top: 18px;
+.signFirstName, .signLastName {
+    flex-basis: 100%;
+   
 }
-
-.login-a-forgot {
-    text-align: center;
-    text-decoration: none;
-    font-size: 13px;
-    color: #282a35;
-    font-family: Source Sans Pro;
-
-}
-
-.login-a-forgot:hover {
-    color: #04aa6d;
-}
-
-.login-label {
+.signup-Login {
     font-size: 14px;
-    font-family: Source Sans Pro;
-    font-weight: 500;
+    text-align: center !important;
+    margin-top: 15px;
 }
 
-.login-label-right {
-    float: right;
-    font-size: 14px;
-    font-family: Source Sans Pro;
-}
-
-.login-label-a {
+.signup-Login a {
     text-decoration: none;
     color: #04aa6d;
 }
 
-.login-footer {
+.signup-footer {
     color: rgba(40, 42, 53, .65);
     text-align: center;
     font-size: 12px;
@@ -86,15 +64,10 @@
     padding: 20px;
 }
 
-.login-footer a {
+.signup-footer a {
     color: rgba(40, 42, 53, .65);
 }
 
-.login-footer a:hover {
+.signup-footer a:hover {
     color: #04aa6d;
-}
-
-.login-err {
-    color: red;
-    font-size: 12px;
 }

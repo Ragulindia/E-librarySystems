@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { SearchItemsComponent } from './search-items/search-items.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { HomeComponent } from './home/home.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import {UserAuthGuard} from './user-auth.guard';
+import { AuthService } from './auth.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -22,13 +28,17 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     SearchItemsComponent,
     AddBookComponent,
-    HomeComponent
+    HomeComponent,
+    ForgotPasswordComponent,
+    SignUpComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserAuthGuard,AuthService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

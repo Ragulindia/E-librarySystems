@@ -1,0 +1,53 @@
+<div class="signup">
+
+    <form [formGroup]="signupForm" novalidate>
+
+        <h2>Sign up</h2>
+        <div class="signupUser">
+            <div class="signFirstName">
+                <div>
+                    <span>Firstname</span>
+                </div>
+                <div>
+                    <input type="text" name="firstname" id="firstname" formControlName="firstname">
+                </div>
+            </div>
+            <div class="signLastName">
+                <div>
+                    <span>Lastname</span>
+                </div>
+                <div>
+                    <input type="text" name="lastname" id="lastname" formControlName="lastname">
+                </div>
+            </div>
+        </div>
+        <div>
+            <span>Email</span>
+        </div>
+        <div>
+            <input type="email" name="email" id="email" formControlName="email">
+        </div>
+        <div>
+            <span>Password</span>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" formControlName="password">
+        </div>
+        <div>
+            <span>Confirm Password</span>
+        </div>
+        <div>
+            <input type="password" name="confPass" id="confPass" formControlName="confPass">
+        </div>
+        <div>
+            <button type="submit" class="signBtn">Register</button>
+        </div>
+        <div class="signup-Login">
+            <span>Have an account? <a routerLink="/login">login</a></span>
+        </div>
+    </form>
+</div>
+<div class="signup-footer">
+    <span>@2021-2022<a href="#">E-librarysystems</a>.All rights reserved<a href="#"> Cookie policy</a>,
+        <a href="#">Privacy</a> and <a href="#">Terms</a></span>
+</div>

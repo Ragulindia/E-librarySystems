@@ -1,0 +1,56 @@
+.addbook {
+    width: 40%;
+    border: 1px solid #04aa6d;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.addbook input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+
+}
+.addbook button {
+margin-top: 10px;
+width: 100%;
+background-color: #04aa6d;
+color: #fff;
+border: 1px solid #04aa6d;
+box-sizing: border-box;
+border-radius: 10px;
+height: 40px;
+font-size: 18px;
+font-weight: 600;
+font-family: Source Sans Pro, sans-serif;
+cursor: pointer;
+}
+.error {
+    color: red;
+    font-size: 12px;
+}
+/* table,tr,td,th {
+    border:1px solid #ced4da;
+    border-collapse: collapse;
+    border-radius: 2px;
+}
+.TableValue {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+
+} */
+table {
+    margin-top: 20px;
+    border:1px solid #ced4da;
+
+}
+table button {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
