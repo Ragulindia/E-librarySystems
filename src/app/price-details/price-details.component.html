@@ -1,1 +1,181 @@
-<p>price-details works!</p>
+<h2 style="text-align: center;">Book Price List </h2>
+<div class="">
+    <form [formGroup]="bookPriceForm" (ngSubmit)="priceSubmit()" novalidate>
+        <span>
+            <h3>Books Category: </h3>
+        </span>
+        <select name="booksCategory" id="booksCategory" (change)="books()" formControlName="categorySelect">
+            <option value="--select--">------select------</option>
+            <option value="allbooks">All Books</option>
+            <option value="Motivational">MotivationalBooks</option>
+            <option value="Novel">Novel Books</option>
+            <option value="comic">Comic Books</option>
+        </select>
+        <!-- <button type="submit">serch</button> -->
+    </form>
+</div>
+<div>
+    <div *ngIf="allBook1">
+        <table class="table table-striped table-hover table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Abook of allBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{Abook.bookId}} </td>
+                    <td>{{Abook.bookName}} </td>
+                    <td>{{Abook.bookAuthor}} </td>
+                    <td>{{Abook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="motivationBook1">
+        <table class="table table-striped table-hover table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Mbook of motivationalBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{Mbook.bookId}} </td>
+                    <td>{{Mbook.bookName}} </td>
+                    <td>{{Mbook.bookAuthor}} </td>
+                    <td>{{Mbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="novelBook1">
+        <table class="table table-striped table-hover table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let nbook of novelBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{nbook.bookId}} </td>
+                    <td>{{nbook.bookName}} </td>
+                    <td>{{nbook.bookAuthor}} </td>
+                    <td>{{nbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="comicBook1">
+        <table class="table table-striped table-hover table table-bordered">
+
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cbook of comicBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{cbook.bookId}} </td>
+                    <td>{{cbook.bookName}} </td>
+                    <td>{{cbook.bookAuthor}} </td>
+                    <td>{{cbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+<div class="add-footer">
+    <div id="foot">
+        <div class="card-body">
+            <div class="footer">
+                <ul>
+                    <h4>
+                        <li>Links</li>
+                    </h4>
+                    <li>Home</li>
+                    <li>about</li>
+                    <li>price card</li>
+                    <li>add book</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <h4>
+                        <li>Themes</li>
+                    </h4>
+                    <li>Guides</li>
+                    <li>Webpack</li>
+                    <li>Getting started</li>
+                    <li>Starter template</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <h4>
+                        <li>Languages</li>
+                    </h4>
+                    <li>Tamil</li>
+                    <li>English</li>
+                    <li>German</li>
+                    <li>Korean</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <h4>
+                        <li>Issues</li>
+                    </h4>
+                    <li> Discussions</li>
+                    <li> Corporate sponsors</li>
+                    <li> Open Collective</li>
+                    <li>Stack Overflow</li>
+                </ul>
+    
+    
+            </div>
+            <ul style="width: 100%;" id="icon">
+                <li> <i class="fa-brands fa-facebook fa-2x"></i></li>
+                <li><i class="fa-brands fa-twitter fa-2x"></i></li>
+                <li><i class="fa-brands fa-linkedin fa-2x"></i></li>
+                <li><i class="fa-brands fa-google fa-2x"></i></li>
+            </ul>
+            <p class="footer-para" style="text-align: center;">E-Library
+                Designed and built with all the love in the world by the E-Library team with the help of our
+                contributors.
+                Code licensed MIT, docs CC BY 3.0.
+                Currently v0.1.2.
+            </p>
+        </div>
+      
+        <div class="card-footer text-muted" style="text-align: center;">
+            <span>@2021-2022<a href="#">E-librarysystems</a>.All rights reserved<a href="#"> Cookie policy</a>,
+                <a href="#">Privacy</a> and <a href="#">Terms</a></span>
+    
+        </div>
+    
+    </div>
+</div>

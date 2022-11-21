@@ -17,6 +17,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import {UserAuthGuard} from './user-auth.guard';
 import { AuthService } from './auth.service';
 import { UserService } from './user.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UserService } from './user.service';
     HomeComponent,
     ForgotPasswordComponent,
     SignUpComponent,
+    FooterComponent,
 
   ],
   imports: [
