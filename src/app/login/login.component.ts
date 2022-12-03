@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   })
-  ErrorMessage:boolean=false
+  ErrorMessage:boolean=false;
   logfunction() {
     // console.log('hello');
     // console.log(this.loginForm.value);

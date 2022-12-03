@@ -10,6 +10,7 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserAuthGuard } from './user-auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'add-book',component:AddBookComponent,canActivate:[UserAuthGuard]},
   {path:'forgot-password',component:ForgotPasswordComponent },
   {path:'sign-up',component:SignUpComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'}
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:"**",component:PageNotFoundComponent}
 ];
 
 @NgModule({

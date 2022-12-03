@@ -312,5 +312,10 @@ export class PriceDetailsComponent implements OnInit {
     },
   ]
 
+  purchase(buybook:number)
+  {
+    this.allBooks.splice(buybook,1)
+  }
+  
 
 }

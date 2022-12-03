@@ -1,0 +1,30 @@
+.page-nf-img {
+    text-align: center;
+}
+
+.page-nf-btn {
+    text-align: center;
+
+}
+
+.page-nf-btn button {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(59, 240, 240, 0.815);
+}
+
+
+
+.page-nf-btn a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.page-nf-btn button:hover {
+
+    background-color: #04aa6d;
+}
+
+
+

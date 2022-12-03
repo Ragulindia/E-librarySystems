@@ -9,3 +9,14 @@ h3 {
 .add-footer {
     margin-top: 25%;
 }
+button {
+    border-radius: 5px;
+
+}
+button:hover {
+    background-color: green;
+    color: #fff;
+}
+select {
+    margin-bottom: 15px;
+}

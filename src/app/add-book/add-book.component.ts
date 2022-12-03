@@ -17,7 +17,7 @@ export class AddBookComponent implements OnInit {
     bookidForm: new FormControl('', [Validators.required]),
     bookNmForm: new FormControl('', [Validators.required]),
     authorForm: new FormControl('', [Validators.required]),
-    avlBooksForm: new FormControl('', [Validators.required,Validators.pattern('[0-9]*')]),
+    avlBooksForm: new FormControl('', [Validators.required, Validators.pattern('[0-9]*')]),
   });
 
   formValue: any[] = [];
@@ -25,7 +25,7 @@ export class AddBookComponent implements OnInit {
 
   errorMsg: boolean = false;
 
-  
+
   addbook() {
 
     var bookid = this.addbookForm.get('bookidForm')?.value;
@@ -42,23 +42,23 @@ export class AddBookComponent implements OnInit {
     if (this.addbookForm.valid) {
       this.tblVal = true;
 
-    this.formValue.push({
-      _bookid: bookid,
-      _bookname: bookname,
-      _author: author,
-      _avlBooks: avlBooks
-    });
-    this.errorMsg=false;
-    this.addbookForm.reset();
+      this.formValue.push({
+        _bookid: bookid,
+        _bookname: bookname,
+        _author: author,
+        _avlBooks: avlBooks
+      });
+      this.errorMsg = false;
+      this.addbookForm.reset();
     } else {
-      
-      this.errorMsg=true;
+
+      this.errorMsg = true;
     }
-  
+
     console.log(this.formValue);
   }
-del(delval:number){
-  this.formValue.splice(delval,1)
-}
+  del(delval: number) {
+    this.formValue.splice(delval, 1)
+  }
 
 }

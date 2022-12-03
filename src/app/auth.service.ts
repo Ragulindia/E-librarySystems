@@ -7,6 +7,7 @@ export class AuthService {
 
   constructor(private rout: Router) { }
    userlog:boolean = false;
+   
   loggedin() {
     let userName = localStorage.getItem('user');
     
@@ -26,4 +27,18 @@ export class AuthService {
     window.location.reload();
     this.rout.navigateByUrl('/login');
   }
-}
+
+  // validUrl(){
+
+  //   let validLink = localStorage.getItem('page');
+  //   var headerView:boolean = true;
+  //   if (validLink == 'page-not-found') {
+  //     headerView = false;
+  //     return false;
+      
+  //   } else {
+  //     headerView = true;
+  //     return true;
+  //   }
+
+  }

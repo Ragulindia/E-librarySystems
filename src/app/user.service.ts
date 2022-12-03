@@ -6,15 +6,11 @@ import { LoginComponent } from './login/login.component';
 })
 export class UserService {
 
-  constructor() { 
+  constructor() { }
+  log(): any {
 
-    
-
+    var userName = localStorage.getItem('user');
+    return userName;
   }
-log():any{
-
-  var userName = localStorage.getItem('user');
-   return userName;
-}
 
 }

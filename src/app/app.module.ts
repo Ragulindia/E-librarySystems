@@ -18,6 +18,7 @@ import {UserAuthGuard} from './user-auth.guard';
 import { AuthService } from './auth.service';
 import { UserService } from './user.service';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
     ForgotPasswordComponent,
     SignUpComponent,
     FooterComponent,
+    PageNotFoundComponent,
 
   ],
   imports: [
