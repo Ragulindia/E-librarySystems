@@ -19,6 +19,10 @@ import { AuthService } from './auth.service';
 import { UserService } from './user.service';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      closeButton:true,
+      preventDuplicates:true,
+      timeOut:4000,
+    }),
   ],
   providers: [UserAuthGuard,AuthService,UserService],
   bootstrap: [AppComponent]

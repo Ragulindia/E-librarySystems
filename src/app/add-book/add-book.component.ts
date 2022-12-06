@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-book',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddBookComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -58,7 +59,10 @@ export class AddBookComponent implements OnInit {
     console.log(this.formValue);
   }
   del(delval: number) {
-    this.formValue.splice(delval, 1)
+    this.formValue.splice(delval, 1);
+    this.toastr.success('This book was detleted sucessfully','Delete')
+
+    
   }
 
 }
